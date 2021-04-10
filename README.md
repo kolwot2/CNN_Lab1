@@ -40,3 +40,17 @@
    <img src="./graphs/prev_epoch_loss.svg">
  * Анализ полученных результатов: На графиках видна достаточно большая разница в точности между обучением и валидацией, а именно точность при обучении гораздо больше точности   при  валидации. Из этого следует явное переобучение представленной нейронной сети. Причинами этого может быть архитектура нейронной сети, а также недостаточно большой размер        датасета (101000 изображений на 101 класс).
 ## 2. Создать и обучить сверточную нейронную сеть произвольной архитектуры с количеством сверточных слоев >3.
+* Архитектура нейронной сети:  
+ Были добавлены Convolutional и Pooling слои. Стоит отметить, что последних 2 Pooling слоя имеют метод выбора average. Это значит, что pooling будет выполняться по принципу расчета среднего значения в квадрате 2x2.  
+ ``` x = tf.keras.layers.Conv2D(filters=6, kernel_size=3)(inputs) // 222x222x6
+  x = tf.keras.layers.MaxPool2D()(x) // 111x111x6
+  x = tf.keras.layers.Conv2D(filters=10, kernel_size=4)(x) // 108x108x10
+  x = tf.keras.layers.MaxPool2D()(x) // 54x54x10
+  x = tf.keras.layers.Conv2D(filters=10, kernel_size=7)(x) // 48x48x10
+  x = tf.keras.layers.AveragePooling2D()(x) // 24x24x10
+  x = tf.keras.layers.Conv2D(filters=12, kernel_size=5)(x) // 20x20x12
+  x = tf.keras.layers.AveragePooling2D()(x) // 10x10x12
+  x = tf.keras.layers.Flatten()(x) // 1200 elements ```  
+
+* Графики обучения изменённой нейронной сети:  
+  
