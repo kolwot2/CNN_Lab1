@@ -35,3 +35,5 @@
    Синияя линия: валидация.
    * График точности epoch_categorical_accuracy:
    <img src="./graphs/prev_epoch_categorical_accuracy.svg">
+   * График функции потерь epoch_loss:
+   <img src="./graphs/prev_epoch_loss.svg">
