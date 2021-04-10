@@ -17,3 +17,6 @@
   * Входные данные:
   
   ```inputs = tf.keras.Input(shape=(RESIZE_TO, RESIZE_TO, 3)) // 224x224x3```
+  * Сonvolutional 2D слой
+
+  ```x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)```
