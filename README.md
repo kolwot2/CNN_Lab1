@@ -33,3 +33,5 @@
 * Графики обучения представленной нейронной сети:  
    Оранжевая линия: обучение.  
    Синияя линия: валидация.
+   * График точности epoch_categorical_accuracy:
+   <img src="./graphs/prev_epoch_categorical_accuracy.svg">
