@@ -1,2 +1,1 @@
-# CNN_Lab1
-CNN lab 1 practices
+# Лабораторная работа №1.
