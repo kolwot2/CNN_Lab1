@@ -42,7 +42,8 @@
 ## 2. Создать и обучить сверточную нейронную сеть произвольной архитектуры с количеством сверточных слоев >3.
 * Архитектура нейронной сети:  
  Были добавлены Convolutional и Pooling слои. Стоит отметить, что последних 2 Pooling слоя имеют метод выбора average. Это значит, что pooling будет выполняться по принципу расчета среднего значения в квадрате 2x2.  
- ```x = tf.keras.layers.Conv2D(filters=6, kernel_size=3)(inputs) // 222x222x6
+ ```
+  x = tf.keras.layers.Conv2D(filters=6, kernel_size=3)(inputs) // 222x222x6
   x = tf.keras.layers.MaxPool2D()(x) // 111x111x6
   x = tf.keras.layers.Conv2D(filters=10, kernel_size=4)(x) // 108x108x10
   x = tf.keras.layers.MaxPool2D()(x) // 54x54x10
